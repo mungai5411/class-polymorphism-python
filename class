@@ -1,1 +1,27 @@
+class Superhero:
+    def __init__(self, name, power, alias):
+        self.name = name
+        self.power = power
+        self.alias = alias
+    
+    def show_identity(self):
+        return f"I'm {self.name}, also known as {self.alias}!"
+
+    def use_power(self):
+        return f"Using my superpower: {self.power}!"
+class FlyingSuperhero(Superhero):
+    def __init__(self, name, power, alias, flight_speed):
+        super().__init__(name, power, alias)
+        self.flight_speed = flight_speed
+    
+    def fly(self):
+        return f"I'm flying at {self.flight_speed} km/h!"
+
+hero1 = Superhero("Blaze", "Fire Manipulation", "The Inferno")
+hero2 = FlyingSuperhero("Skyline", "Weather Control", "Stormchaser", 900)
+print(hero1.show_identity())
+print(hero1.use_power())
+print(hero2.show_identity())
+print(hero2.use_power())
+print(hero2.fly())
 
